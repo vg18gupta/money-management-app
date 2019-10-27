@@ -12,9 +12,9 @@ class App extends Component {
     <BrowserRouter>
       <div className="container">
         <Switch>
-          <Route path='/' exact Component={Home} />
-          <Route path='/login' Component={Login}/>
-          <Route path='/register' Component={Register}/>
+          <Route path='/' exact component={Home} />
+          <Route path='/login' component={Login}/>
+          <Route path='/register' component={Register}/>
         </Switch>
 
 
