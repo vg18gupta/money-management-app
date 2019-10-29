@@ -23,13 +23,13 @@ class Login extends React.Component {
     render(){
         let {  password, email } = this.state
         return (
-            <div class='row'>
+            <div className='row'>
                 <div className='col-md-6 offset-md-3'>
-                    <h1 class='text-center display-4'>Login here</h1>
+                    <h1 className='text-center display-4'>Login here</h1>
                     <form onSubmit={this.submitHandler}>
 
                         <div className='form-group'>
-                            <label htmlfor='email'> Email: </label>
+                            <label htmlFor='email'> Email: </label>
                             <input
                                 type="email"
                                 className='form-control'
@@ -41,7 +41,7 @@ class Login extends React.Component {
                             />
                         </div>
                         <div className='form-group'>
-                            <label htmlfor='password'> Password: </label>
+                            <label htmlFor='password'> Password: </label>
                             <input
                                 type="password"
                                 className='form-control'
@@ -53,7 +53,7 @@ class Login extends React.Component {
                             />
                         </div>
                         <Link to='/register'>Don't have Account? Register here</Link>
-                        <button className='btn btn-primary my-3 d-block'>Register</button>
+                        <button className='btn btn-primary my-3 d-block'>Login</button>
                     </form>
                 </div>
             </div>
