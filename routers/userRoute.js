@@ -1,12 +1,14 @@
 const router = require('express').Router()
 
-const {login} = require('../controllers/userController')
-const {register} = require('../controllers/userController')
+const {login, register, allUser} = require('../controllers/userController')
 
-//localhost:4000/api/users/register
- router.post('/register', register)
+// Registration Route
+// localhost:4000/api/users/register
+router.post('/register', register)
 
- //localhost:4000/api/users/login
- router.post('/login', login)
+// Login Route
+// localhost:4000/api/users/login
+router.post('/login', login)
+router.get('/all', allUser)
 
 module.exports = router

@@ -5,25 +5,32 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js",
+    "server": "node server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9"
+  },
   "dependencies": {
-    "bcrypt": "^3.0.6",
-    "body-parser": "^1.19.0",
-    "concurrently": "^5.0.0",
+    "bcrypt": "^3.0.3",
+    "body-parser": "^1.18.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.7.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "jwt-decode": "^2.2.0",
+    "mongoose": "^5.4.0",
     "morgan": "^1.9.1",
-    "nodemon": "^1.19.3",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "validator": "^11.1.0"
+    "validator": "^10.10.0"
+  },
+  "engines": {
+    "node": "11.3.0"
   }
 }
